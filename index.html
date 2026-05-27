@@ -2,1037 +2,261 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>برامج وخدمات التوجيه الطلابي | مدرسة الجشة المتوسطة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>خطة برامج وخدمات التوجيه الطلابي | مدرسة الجشة المتوسطة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://cdn.fontsource.com/css/tajawal/400.css" rel="stylesheet">
-    <link href="https://cdn.fontsource.com/css/tajawal/500.css" rel="stylesheet">
-    <link href="https://cdn.fontsource.com/css/tajawal/600.css" rel="stylesheet">
-    <link href="https://cdn.fontsource.com/css/tajawal/700.css" rel="stylesheet">
-    <link href="https://cdn.fontsource.com/css/tajawal/800.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            50: '#FFF9E6', 100: '#FFF0BF', 200: '#FFE080',
-                            300: '#FFD040', 400: '#FFC107', 500: '#D4A017',
-                            600: '#B8860B', 700: '#996515', 800: '#7A5010', 900: '#5C3D0A',
-                        },
-                        navy: {
-                            50: '#E8EDF2', 100: '#C5D0DB', 200: '#8BA1B7',
-                            300: '#517293', 400: '#1A3A5C', 500: '#0D1B2A',
-                            600: '#091220', 700: '#050A16', 800: '#03060D', 900: '#010306',
-                        }
+                        gold: { 50: '#FFF9E6', 100: '#FFF0BF', 200: '#FFE080', 300: '#FFD040', 400: '#FFC107', 500: '#D4A017', 600: '#B8860B', 700: '#996515', 800: '#7A5010', 900: '#5C3D0A' },
+                        navy: { 50: '#E8EDF2', 100: '#C5D0DB', 200: '#8BA1B7', 300: '#517293', 400: '#1A3A5C', 500: '#0D1B2A', 600: '#091220', 700: '#050A16', 800: '#03060D', 900: '#010306' },
+                        whatsapp: { 500: '#25D366', 600: '#128C7E' }
                     },
-                    fontFamily: {
-                        sans: ['Tajawal', 'system-ui', 'sans-serif'],
-                    }
+                    fontFamily: { sans: ['Tajawal', 'system-ui', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Tajawal', system-ui, sans-serif; overflow-x: hidden; }
+        body { font-family: 'Tajawal', sans-serif; background: #0D1B2A; overflow-x: hidden; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0D1B2A; }
         ::-webkit-scrollbar-thumb { background: #D4A017; border-radius: 4px; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-        @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 20px rgba(212, 160, 23, 0.3); } 50% { box-shadow: 0 0 40px rgba(212, 160, 23, 0.6); } }
-        @keyframes starburst { 0% { transform: scale(0.8) rotate(0deg); opacity: 0.5; } 50% { transform: scale(1.1) rotate(180deg); opacity: 1; } 100% { transform: scale(0.8) rotate(360deg); opacity: 0.5; } }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(60px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes slideDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        .animate-pulse-gold { animation: pulse-gold 3s ease-in-out infinite; }
-        .animate-starburst { animation: starburst 8s ease-in-out infinite; }
-        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-        .reveal-delay-4 { transition-delay: 0.4s; }
-        .gradient-text { background: linear-gradient(135deg, #FFD040, #D4A017, #B8860B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .glass { background: rgba(13, 27, 42, 0.6); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(212, 160, 23, 0.15); }
-        .particle { position: absolute; width: 4px; height: 4px; background: #D4A017; border-radius: 50%; animation: particleFloat linear infinite; }
-        @keyframes particleFloat { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-100vh) translateX(50px); opacity: 0; } }
-        .card-hover { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .card-hover:hover { transform: translateY(-12px); box-shadow: 0 25px 60px rgba(212, 160, 23, 0.15); border-color: rgba(212, 160, 23, 0.5); }
-        .btn-primary { background: linear-gradient(135deg, #D4A017, #B8860B); color: #0D1B2A; font-weight: 700; padding: 14px 36px; border-radius: 12px; transition: all 0.3s ease; position: relative; overflow: hidden; display: inline-block; }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(212, 160, 23, 0.4); }
-        .btn-secondary { border: 2px solid rgba(212, 160, 23, 0.5); color: #D4A017; padding: 12px 34px; border-radius: 12px; transition: all 0.3s ease; font-weight: 600; display: inline-block; }
-        .btn-secondary:hover { background: rgba(212, 160, 23, 0.1); border-color: #D4A017; transform: translateY(-3px); }
-        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.3), transparent); }
-        .nav-link { position: relative; color: rgba(255,255,255,0.7); transition: color 0.3s ease; }
-        .nav-link:hover { color: #D4A017; }
-        .nav-link::after { content: ''; position: absolute; bottom: -4px; right: 0; width: 0; height: 2px; background: #D4A017; transition: width 0.3s ease; }
-        .nav-link:hover::after { width: 100%; }
-        .mobile-menu { transform: translateX(-100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .mobile-menu.open { transform: translateX(0); }
-        .starburst-bg { position: relative; overflow: hidden; }
-        .starburst-bg::before { content: ''; position: absolute; top: 50%; right: 50%; transform: translate(50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(212, 160, 23, 0.08) 0%, transparent 70%); border-radius: 50%; }
-        .input-glow { transition: all 0.3s ease; }
-        .input-glow:focus { border-color: #D4A017; box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2); }
-        select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23D4A017' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: left 1rem center; -webkit-appearance: none; appearance: none; }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
-        .accordion-content.open { max-height: 800px; }
-        .accordion-icon { transition: transform 0.3s ease; }
-        .accordion-icon.rotated { transform: rotate(180deg); }
-        .program-detail { display: none; }
-        .program-detail.active { display: block; animation: slideUp 0.5s ease forwards; }
-        .tab-active { background: linear-gradient(135deg, #D4A017, #B8860B); color: #0D1B2A; font-weight: 700; box-shadow: 0 4px 15px rgba(212, 160, 23, 0.3); transform: translateY(-2px); }
+        .card-hover { transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 30px -15px rgba(0,0,0,0.3); }
+        .program-detail { display: none; animation: fadeSlideUp 0.4s ease; }
+        .program-detail.active { display: block; }
+        @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .wa-btn { background: linear-gradient(135deg, #25D366, #128C7E); transition: all 0.2s; }
+        .wa-btn:hover { transform: scale(1.02); box-shadow: 0 10px 20px -5px rgba(37,211,102,0.4); }
+        .glass-nav { background: rgba(13,27,42,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212,160,23,0.2); }
+        .section-title { position: relative; display: inline-block; }
+        .section-title:after { content: ''; position: absolute; bottom: -10px; right: 0; width: 60px; height: 3px; background: #D4A017; border-radius: 3px; }
+        .info-card { background: rgba(13,27,42,0.6); backdrop-filter: blur(4px); border: 1px solid rgba(212,160,23,0.2); transition: 0.2s; }
+        .info-card:hover { border-color: #D4A017; }
     </style>
 </head>
-<body class="bg-navy-500 text-white">
+<body class="text-gray-200">
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 right-0 left-0 z-50 transition-all duration-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="#home" class="flex items-center space-x-3 space-x-reverse">
-                    <div class="w-10 h-10">
-                        <svg viewBox="0 0 40 40" class="w-10 h-10">
-                            <polygon points="20,2 25,15 38,15 27,23 31,37 20,29 9,37 13,23 2,15 15,15" fill="url(#goldGrad)" stroke="#D4A017" stroke-width="0.5"/>
-                            <defs><linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD040"/><stop offset="100%" style="stop-color:#B8860B"/></linearGradient></defs>
-                        </svg>
-                    </div>
-                    <span class="text-lg font-bold gradient-text">قسم التوجيه الطلابي</span>
-                </a>
-                <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
-                    <a href="#home" class="nav-link text-sm font-medium">الرئيسية</a>
-                    <a href="#programs" class="nav-link text-sm font-medium">البرامج</a>
-                    <a href="#about" class="nav-link text-sm font-medium">عن الموجه</a>
-                    <a href="#kpi" class="nav-link text-sm font-medium">المؤشرات</a>
-                    <a href="#contact" class="nav-link text-sm font-medium">تواصل</a>
-                </div>
-                <button id="mobileMenuBtn" class="lg:hidden text-white text-2xl"><i class="fas fa-bars"></i></button>
+    <nav class="fixed top-0 right-0 left-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-2">
+                <i class="fas fa-chalkboard-user text-gold-500 text-2xl"></i>
+                <span class="font-bold text-xl gradient-text bg-clip-text text-transparent bg-gradient-to-l from-gold-400 to-gold-600">قسم التوجيه الطلابي</span>
+            </a>
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#home" class="hover:text-gold-400 transition">الرئيسية</a>
+                <a href="#vision" class="hover:text-gold-400 transition">الرؤية والرسالة</a>
+                <a href="#fields" class="hover:text-gold-400 transition">المجالات</a>
+                <a href="#programs" class="hover:text-gold-400 transition">البرامج</a>
+                <a href="#contact" class="hover:text-gold-400 transition">تواصل</a>
             </div>
+            <button id="menuBtn" class="md:hidden text-white text-xl"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 w-80 h-full bg-navy-600/95 backdrop-blur-xl z-50 border-r border-gold-500/20">
-        <div class="p-6">
-            <div class="flex justify-between items-center mb-10">
-                <span class="text-lg font-bold gradient-text">القائمة</span>
-                <button id="closeMobileMenu" class="text-white text-2xl"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="flex flex-col space-y-4">
-                <a href="#home" class="mobile-nav-link text-lg py-3 border-b border-white/10 hover:text-gold-400 transition-colors">الرئيسية</a>
-                <a href="#programs" class="mobile-nav-link text-lg py-3 border-b border-white/10 hover:text-gold-400 transition-colors">البرامج</a>
-                <a href="#about" class="mobile-nav-link text-lg py-3 border-b border-white/10 hover:text-gold-400 transition-colors">عن الموجه</a>
-                <a href="#kpi" class="mobile-nav-link text-lg py-3 border-b border-white/10 hover:text-gold-400 transition-colors">المؤشرات</a>
-                <a href="#contact" class="mobile-nav-link text-lg py-3 border-b border-white/10 hover:text-gold-400 transition-colors">تواصل</a>
-            </div>
-        </div>
-    </div>
-
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-500">
-        <div class="absolute inset-0 z-0 bg-gradient-to-br from-navy-500 via-navy-600 to-navy-500"></div>
-        <div id="particles" class="absolute inset-0 z-1 pointer-events-none"></div>
-        <div class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] animate-starburst z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-gold-500/10 via-transparent to-gold-500/10 rounded-full blur-3xl"></div>
-        </div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div style="animation: slideDown 1s ease forwards;">
-                <div class="inline-flex items-center space-x-2 space-x-reverse bg-gold-500/10 border border-gold-500/20 rounded-full px-5 py-2 mb-8">
-                    <span class="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></span>
-                    <span class="text-gold-400 text-sm font-medium">مدرسة الجشة المتوسطة  1447هـ</span>
-                </div>
+    <section id="home" class="pt-28 pb-16 px-5 text-center bg-gradient-to-br from-navy-600 to-navy-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex bg-gold-500/10 border border-gold-500/30 rounded-full px-5 py-1.5 text-gold-400 text-sm mb-4"><i class="fas fa-school ml-2"></i> مدرسة الجشة المتوسطة</div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">برامج وخدمات <span class="gradient-text bg-gradient-to-l from-gold-300 to-gold-600 bg-clip-text text-transparent">التوجيه الطلابي</span></h1>
+            <p class="text-gold-300 max-w-2xl mx-auto mt-5 text-lg font-semibold">الفصل الدراسي الثاني 1447هـ</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#programs" class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-3 px-8 rounded-xl transition inline-flex items-center justify-center gap-2"><i class="fas fa-list-ul"></i> استعراض البرامج</a>
             </div>
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6" style="animation: slideUp 1s ease 0.2s forwards; opacity: 0;">
-                <span class="block text-white">برامج وخدمات</span>
-                <span class="gradient-text">التوجيه الطلابي</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed" style="animation: slideUp 1s ease 0.4s forwards; opacity: 0;">
-                خطة شاملة لبرامج وخدمات التوجيه الطلابي تتضمن ١٣ برنامجاً وخدمة مصممة لتحقيق التوافق التربوي والنفسي والاجتماعي والمهني للطلاب
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4" style="animation: slideUp 1s ease 0.6s forwards; opacity: 0;">
-                <a href="#programs" class="btn-primary text-lg">استعرض البرامج <i class="fas fa-arrow-left mr-2"></i></a>
-                <a href="#about" class="btn-secondary text-lg"><i class="fas fa-user-tie ml-2"></i> عن الموجه</a>
-            </div>
-            <div class="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto" style="animation: slideUp 1s ease 0.8s forwards; opacity: 0;">
-                <div class="text-center"><div class="text-3xl sm:text-4xl font-bold gradient-text counter" data-target="13">٠</div><div class="text-sm text-gray-400 mt-1">برنامج وخدمة</div></div>
-                <div class="text-center"><div class="text-3xl sm:text-4xl font-bold gradient-text counter" data-target="95">٠</div><div class="text-sm text-gray-400 mt-1">٪ الانضباط المستهدف</div></div>
-                <div class="text-center"><div class="text-3xl sm:text-4xl font-bold gradient-text counter" data-target="80">٠</div><div class="text-sm text-gray-400 mt-1">٪ انخفاض المخالفات</div></div>
-                <div class="text-center"><div class="text-3xl sm:text-4xl font-bold gradient-text counter" data-target="100">٠</div><div class="text-sm text-gray-400 mt-1">٪ إشعار الأسرة</div></div>
-            </div>
-        </div>
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"><a href="#programs" class="text-gold-400/60 text-2xl"><i class="fas fa-chevron-down"></i></a></div>
-    </section>
-
-    <!-- Programs Section -->
-    <section id="programs" class="relative py-24 bg-navy-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 reveal">
-                <span class="text-gold-400 font-semibold text-sm tracking-widest">البرامج والخدمات</span>
-                <h2 class="text-4xl sm:text-5xl font-bold mt-4 mb-6">برامج وخدمات <span class="gradient-text">التوجيه الطلابي</span></h2>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg">مجموعة البرامج والخدمات المعتمدة التي ينفذها الموجه الطلابي لتحقيق أهداف التوجيه</p>
-            </div>
-
-            <!-- Programs Grid - Clickable -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" id="programsGrid">
-
-                <!-- 1. البرنامج التوجيهي -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-1" style="border-top: 4px solid #D4A017;" onclick="showProgram(0)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-gold-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-compass text-gold-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">البرنامج التوجيهي</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">تهيئة الطلاب المستجدين في الصف الأول (ابتدائي، متوسط، ثانوي) والطلاب المنتقلين للبيئة المدرسية، والتعريف بالمرافق والأنظمة.</p>
-                                <span class="inline-block bg-gold-100 text-gold-700 text-xs font-bold px-3 py-1 rounded-full">بداية العام الدراسي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. تعزيز السلوك الإيجابي -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-2" style="border-top: 4px solid #10B981;" onclick="showProgram(1)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-thumbs-up text-green-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">تعزيز السلوك الإيجابي</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">غرس القيم الإيجابية وتعزيزها لدى الطلاب، وتكريم المتميزين سلوكياً لتحفيز أقرانهم.</p>
-                                <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">مستمر</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. الحد من العنف (رفق) -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-3" style="border-top: 4px solid #EF4444;" onclick="showProgram(2)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-red-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-hand-paper text-red-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">الحد من العنف (رفق)</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">برنامج للحد من التنمر والعنف في المدرسة من خلال التوعية وبناء المهارات الاجتماعية والحوار.</p>
-                                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full">أساسي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. التوجيه التعليمي والمهني -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-1" style="border-top: 4px solid #8B5CF6;" onclick="showProgram(3)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-graduation-cap text-purple-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">التوجيه التعليمي والمهني</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">مساعدة الطلاب على فهم قدراتهم وميولهم واختيار المسار التعليمي والمهني المناسب.</p>
-                                <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full">توجيهي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. رعاية الطلاب المتفوقين -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-2" style="border-top: 4px solid #F59E0B;" onclick="showProgram(4)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-yellow-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-medal text-yellow-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">رعاية الطلاب المتفوقين</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">رعاية الموهوبين والمتفوقين دراسياً وتقديم البرامج المحفزة لهم لتنمية قدراتهم.</p>
-                                <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-bold px-3 py-1 rounded-full">نمائي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6. رعاية المتأخرين دراسياً والغياب -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-3" style="border-top: 4px solid #3B82F6;" onclick="showProgram(5)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-user-clock text-blue-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">رعاية التأخر الدراسي والغياب</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">رصد حالات الغياب المتكرر والتأخر الدراسي، ودراستها، ووضع الخطط العلاجية.</p>
-                                <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">علاجي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. رعاية ذوي الظروف الخاصة -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-1" style="border-top: 4px solid #D946EF;" onclick="showProgram(6)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-pink-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-hand-holding-heart text-pink-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">رعاية ذوي الظروف الخاصة</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">رعاية الطلاب الأيتام، وأبناء المسجونين، وأبناء الأسر المتعاطية، وطلاب الحماية الاجتماعية.</p>
-                                <span class="inline-block bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-full">سرية</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 8. التوعية بأضرار التدخين والمخدرات -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-2" style="border-top: 4px solid #6B7280;" onclick="showProgram(7)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-ban text-gray-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">التوعية بالتدخين والمخدرات</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">تعزيز وعي الطلاب بأضرار التدخين والمخدرات والمؤثرات العقلية وسبل الوقاية منها.</p>
-                                <span class="inline-block bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1 rounded-full">وقائي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9. الأمن السيبراني والوعي الرقمي -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-3" style="border-top: 4px solid #06B6D4;" onclick="showProgram(8)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-shield-alt text-cyan-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">الأمن السيبراني والوعي الرقمي</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">توعية الطلاب بمخاطر العالم الرقمي وحمايتهم من التنمر الإلكتروني والمحتوى الضار.</p>
-                                <span class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-3 py-1 rounded-full">وقائي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 10. شراكة المدرسة مع الأسرة (ارتقاء) -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-1" style="border-top: 4px solid #EC4899;" onclick="showProgram(9)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-pink-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-users text-pink-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">شراكة المدرسة مع الأسرة (ارتقاء)</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">تعزيز العلاقة بين المدرسة والأسرة وفتح قنوات اتصال فعالة لتحقيق الشراكة الحقيقية.</p>
-                                <span class="inline-block bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-full">تعاوني</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 11. رعاية الطلاب الموهوبين -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-2" style="border-top: 4px solid #F97316;" onclick="showProgram(10)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-orange-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-lightbulb text-orange-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">رعاية الطلاب الموهوبين</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">الكشف عن الطلاب الموهوبين في مختلف المجالات ورعاية مواهبهم وتنميتها.</p>
-                                <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full">نمائي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 12. رعاية الطلاب ذوي الإعاقة -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal reveal-delay-3" style="border-top: 4px solid #14B8A6;" onclick="showProgram(11)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-wheelchair text-teal-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">رعاية الطلاب ذوي الإعاقة</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">دمج الطلاب ذوي الإعاقة في البيئة المدرسية وتوفير التسهيلات والدعم اللازم.</p>
-                                <span class="inline-block bg-teal-100 text-teal-700 text-xs font-bold px-3 py-1 rounded-full">دمج</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 13. قواعد السلوك والمواظبة -->
-                <div class="bg-white rounded-2xl overflow-hidden card-hover cursor-pointer group reveal" style="border-top: 4px solid #6366F1;" onclick="showProgram(12)">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-indigo-100 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-scale-balanced text-indigo-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-bold text-navy-600 mb-2">قواعد السلوك والمواظبة</h3>
-                                <p class="text-gray-500 text-sm leading-relaxed mb-3">تعزيز الالتزام بالنظام المدرسي وتطبيق لائحة قواعد السلوك والمواظبة لعام 1447هـ.</p>
-                                <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full">نظامي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Detailed Program Content Area -->
-            <div id="programDetails" class="program-detail">
-                <!-- Content will be injected by JavaScript -->
-            </div>
-
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="relative py-24 bg-navy-500 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="reveal relative">
-                    <div class="glass rounded-3xl p-10 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-40 h-40 bg-gold-500/10 rounded-full blur-3xl"></div>
-                        <div class="relative z-10">
-                            <div class="w-24 h-24 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-gold-500/30">
-                                <i class="fas fa-user-tie text-4xl text-navy-600"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white text-center mb-2">عبدالهادي بن محمد المحسن</h3>
-                            <p class="text-gold-400 text-center mb-6 font-semibold">الموجه الطلابي</p>
-                            <div class="space-y-3">
-                                <div class="flex items-center space-x-3 space-x-reverse">
-                                    <div class="w-8 h-8 rounded-lg bg-gold-500/20 flex items-center justify-center flex-shrink-0"><i class="fas fa-school text-gold-400 text-sm"></i></div>
-                                    <span class="text-gray-300">مدرسة الجشة المتوسطة</span>
-                                </div>
-                                <div class="flex items-center space-x-3 space-x-reverse">
-                                    <div class="w-8 h-8 rounded-lg bg-gold-500/20 flex items-center justify-center flex-shrink-0"><i class="fas fa-calendar text-gold-400 text-sm"></i></div>
-                                    <span class="text-gray-300">الفصل الثاني 1447هـ</span>
-                                </div>
-                                <div class="flex items-center space-x-3 space-x-reverse">
-                                    <div class="w-8 h-8 rounded-lg bg-gold-500/20 flex items-center justify-center flex-shrink-0"><i class="fas fa-book text-gold-400 text-sm"></i></div>
-                                    <span class="text-gray-300">لائحة 1447هـ المحدثة</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 glass rounded-2xl p-6 animate-float hidden sm:block">
-                        <div class="flex items-center space-x-4 space-x-reverse">
-                            <div class="w-12 h-12 rounded-full bg-gold-500/20 flex items-center justify-center"><i class="fas fa-trophy text-gold-400 text-xl"></i></div>
-                            <div>
-                                <div class="text-2xl font-bold gradient-text">13</div>
-                                <div class="text-sm text-gray-400">برنامج معتمد</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="absolute -top-4 -right-4 w-24 h-24 border-2 border-gold-500/20 rounded-2xl"></div>
+    <!-- الرؤية والرسالة والقيم (تم تعديل الرؤية) -->
+    <section id="vision" class="py-16 px-5 bg-navy-700 border-y border-gold-500/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold">الرؤية <span class="text-gold-400">والرسالة والقيم</span></h2></div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="info-card p-6 rounded-2xl text-center">
+                    <i class="fas fa-eye text-gold-400 text-4xl mb-3"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">الرؤية</h3>
+                    <p class="text-gray-300 leading-relaxed">الريادة في التوجيه الطلابي لتحقيق التوافق التربوي والنفسي والاجتماعي والمهني للطالب، في بيئة تعليمية آمنة ومحفزة.</p>
                 </div>
-                <div class="reveal reveal-delay-2">
-                    <span class="text-gold-400 font-semibold text-sm tracking-widest">عن الموجه</span>
-                    <h2 class="text-4xl sm:text-5xl font-bold mt-4 mb-6">نبني <span class="gradient-text">التوافق الشامل</span></h2>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        يهدف الموجه الطلابي إلى تحقيق التوافق التربوي والنفسي والاجتماعي والمهني للطلاب، من خلال تنفيذ برامج وخدمات إرشادية متميزة تسهم في تنمية قدرات الطلاب وتعزيز السلوك الإيجابي.
-                    </p>
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-center space-x-3 space-x-reverse"><div class="w-6 h-6 rounded-full bg-gold-500/20 flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-gold-400 text-xs"></i></div><span class="text-gray-300">تنفيذ ١٣ برنامجاً وخدمة إرشادية</span></div>
-                        <div class="flex items-center space-x-3 space-x-reverse"><div class="w-6 h-6 rounded-full bg-gold-500/20 flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-gold-400 text-xs"></i></div><span class="text-gray-300">متابعة مؤشرات الأداء بشكل مستمر</span></div>
-                        <div class="flex items-center space-x-3 space-x-reverse"><div class="w-6 h-6 rounded-full bg-gold-500/20 flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-gold-400 text-xs"></i></div><span class="text-gray-300">التعاون مع المعلمين وأولياء الأمور</span></div>
-                        <div class="flex items-center space-x-3 space-x-reverse"><div class="w-6 h-6 rounded-full bg-gold-500/20 flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-gold-400 text-xs"></i></div><span class="text-gray-300">توثيق الخدمات في نظام نور</span></div>
-                    </div>
-                    <a href="#programs" class="btn-primary inline-flex items-center">البرامج والخدمات <i class="fas fa-arrow-left mr-2"></i></a>
+                <div class="info-card p-6 rounded-2xl text-center">
+                    <i class="fas fa-bullhorn text-gold-400 text-4xl mb-3"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">الرسالة</h3>
+                    <p class="text-gray-300 leading-relaxed">تقديم خدمات إرشادية متميزة ورائدة محققة لأهداف التعليم في المملكة العربية السعودية، تسهم في تنمية شخصية الطالب وتنمي مهاراته وقدراته.</p>
+                </div>
+                <div class="info-card p-6 rounded-2xl text-center">
+                    <i class="fas fa-gem text-gold-400 text-4xl mb-3"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">القيم</h3>
+                    <p class="text-gray-300">المبادرة والريادة – التعاون والتكامل – الإنجاز والتميز – الشفافية والمصداقية</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="relative py-20 bg-navy-600 border-y border-gold-500/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8" id="statsSection">
-                <div class="text-center counter-item"><div class="w-16 h-16 rounded-2xl bg-gold-500/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-book text-2xl text-gold-400"></i></div><div class="text-4xl sm:text-5xl font-bold gradient-text counter" data-target="13">٠</div><div class="text-gray-400 mt-2 font-medium">برنامج وخدمة</div></div>
-                <div class="text-center counter-item"><div class="w-16 h-16 rounded-2xl bg-gold-500/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-scale-balanced text-2xl text-gold-400"></i></div><div class="text-4xl sm:text-5xl font-bold gradient-text counter" data-target="95">٠</div><div class="text-gray-400 mt-2 font-medium">٪ الانضباط المستهدف</div></div>
-                <div class="text-center counter-item"><div class="w-16 h-16 rounded-2xl bg-gold-500/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-chart-line text-2xl text-gold-400"></i></div><div class="text-4xl sm:text-5xl font-bold gradient-text counter" data-target="80">٠</div><div class="text-gray-400 mt-2 font-medium">٪ انخفاض المخالفات</div></div>
-                <div class="text-center counter-item"><div class="w-16 h-16 rounded-2xl bg-gold-500/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-file-signature text-2xl text-gold-400"></i></div><div class="text-4xl sm:text-5xl font-bold gradient-text counter" data-target="100">٠</div><div class="text-gray-400 mt-2 font-medium">٪ إشعار الأسرة</div></div>
+    <!-- مجالات التوجيه الطلابي -->
+    <section id="fields" class="py-16 px-5 bg-navy-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold">مجالات <span class="text-gold-400">التوجيه الطلابي</span></h2></div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="flex gap-3 items-start p-4 rounded-xl bg-navy-700/50 border border-gray-700"><i class="fas fa-mosque text-gold-400 text-2xl"></i><div><h3 class="font-bold">التوجيه الأخلاقي</h3><p class="text-sm text-gray-300">تنمية المبادئ والقيم الإسلامية وعرضها لدى الطالب.</p></div></div>
+                <div class="flex gap-3 items-start p-4 rounded-xl bg-navy-700/50 border border-gray-700"><i class="fas fa-graduation-cap text-gold-400 text-2xl"></i><div><h3 class="font-bold">التوجيه التربوي</h3><p class="text-sm text-gray-300">مساعدة الطالب على فهم قدراته وتحقيق النجاح الدراسي.</p></div></div>
+                <div class="flex gap-3 items-start p-4 rounded-xl bg-navy-700/50 border border-gray-700"><i class="fas fa-users text-gold-400 text-2xl"></i><div><h3 class="font-bold">التوجيه الاجتماعي</h3><p class="text-sm text-gray-300">تهيئة الطالب للتكيف مع البيئة المدرسية والاجتماعية.</p></div></div>
+                <div class="flex gap-3 items-start p-4 rounded-xl bg-navy-700/50 border border-gray-700"><i class="fas fa-brain text-gold-400 text-2xl"></i><div><h3 class="font-bold">التوجيه النفسي</h3><p class="text-sm text-gray-300">مساعدة الطالب في مراحل نموه وتجاوز المشكلات النفسية.</p></div></div>
+                <div class="flex gap-3 items-start p-4 rounded-xl bg-navy-700/50 border border-gray-700"><i class="fas fa-shield-alt text-gold-400 text-2xl"></i><div><h3 class="font-bold">التوجيه الوقائي</h3><p class="text-sm text-gray-300">وقاية الطالب من المشكلات السلوكية والدراسية والمخاطر.</p></div></div>
+                <div class="flex gap-3 items-start p-4 rounded-xl bg-navy-700/50 border border-gray-700"><i class="fas fa-briefcase text-gold-400 text-2xl"></i><div><h3 class="font-bold">التوجيه المهني</h3><p class="text-sm text-gray-300">مساعدة الطالب في اكتشاف الميول المهنية واختيار المسار المناسب.</p></div></div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="relative py-24 bg-navy-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div class="reveal">
-                    <span class="text-gold-400 font-semibold text-sm tracking-widest">تواصل معنا</span>
-                    <h2 class="text-4xl sm:text-5xl font-bold mt-4 mb-6">مدرسة <span class="gradient-text">الجشة المتوسطة</span></h2>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-10">للاستفسار عن برنامج التوجيه الطلابي أو للاطلاع على تفاصيل اللائحة المحدثة، لا تتردد في التواصل</p>
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4 space-x-reverse"><div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-school text-gold-400"></i></div><div><h4 class="text-white font-semibold mb-1">المدرسة</h4><p class="text-gray-400">مدرسة الجشة المتوسطة</p></div></div>
-                        <div class="flex items-start space-x-4 space-x-reverse"><div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-user-tie text-gold-400"></i></div><div><h4 class="text-white font-semibold mb-1">الموجه الطلابي</h4><p class="text-gray-400">عبدالهادي بن محمد المحسن</p></div></div>
-                        <div class="flex items-start space-x-4 space-x-reverse"><div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-calendar text-gold-400"></i></div><div><h4 class="text-white font-semibold mb-1">الفترة</h4><p class="text-gray-400">الفصل الثاني 1447هـ</p></div></div>
-                    </div>
-                    <div class="mt-10 flex space-x-4 space-x-reverse">
-                        <a href="#" class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-600 transition-all duration-300"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-600 transition-all duration-300"><i class="fas fa-envelope"></i></a>
-                        <a href="#" class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-600 transition-all duration-300"><i class="fas fa-phone"></i></a>
-                    </div>
-                </div>
-                <div class="reveal reveal-delay-2">
-                    <form id="contactForm" class="glass rounded-2xl p-8 space-y-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div><label class="block text-sm font-medium text-gray-300 mb-2">الاسم</label><input type="text" class="input-glow w-full bg-navy-500/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none text-right" placeholder="اسمك" required></div>
-                            <div><label class="block text-sm font-medium text-gray-300 mb-2">الصفة</label><select class="input-glow w-full bg-navy-500/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none" required><option value="">اختر الصفة</option><option value="student">طالب</option><option value="parent">ولي أمر</option><option value="teacher">معلم</option><option value="admin">إداري</option></select></div>
-                        </div>
-                        <div><label class="block text-sm font-medium text-gray-300 mb-2">الموضوع</label><select class="input-glow w-full bg-navy-500/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none" required><option value="">اختر موضوع الاستفسار</option><option value="behavior">قواعد السلوك والمواظبة</option><option value="contract">عقد الالتزام السلوكي</option><option value="violation">استفسار عن مخالفة</option><option value="attendance">المواظبة والغياب</option><option value="other">أخرى</option></select></div>
-                        <div><label class="block text-sm font-medium text-gray-300 mb-2">الرسالة</label><textarea rows="5" class="input-glow w-full bg-navy-500/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none resize-none text-right" placeholder="اكتب رسالتك هنا..." required></textarea></div>
-                        <button type="submit" class="btn-primary w-full text-lg">إرسال الرسالة <i class="fas fa-paper-plane mr-2"></i></button>
-                    </form>
-                    <div id="successMessage" class="hidden glass rounded-2xl p-8 text-center">
-                        <div class="w-16 h-16 rounded-full bg-gold-500/20 flex items-center justify-center mx-auto mb-4"><i class="fas fa-check text-gold-400 text-2xl"></i></div>
-                        <h3 class="text-xl font-bold text-white mb-2">تم الإرسال بنجاح!</h3>
-                        <p class="text-gray-400">شكراً لتواصلك. سيتم الرد في أقرب وقت.</p>
-                    </div>
-                </div>
+    <!-- مناهج التوجيه -->
+    <section class="py-16 px-5 bg-navy-700">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold">مناهج <span class="text-gold-400">التوجيه</span></h2></div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="info-card p-6 rounded-2xl text-center"><i class="fas fa-seedling text-gold-400 text-4xl mb-3"></i><h3 class="text-xl font-bold">المنهج الإنمائي</h3><p class="text-gray-300 text-sm">يهدف إلى تحقيق النمو السليم لدى الطالب العاديين لتحقيق أعلى مستوى من الصحة النفسية والتوافق الاجتماعي والمهني والتربوي.</p></div>
+                <div class="info-card p-6 rounded-2xl text-center"><i class="fas fa-umbrella text-gold-400 text-4xl mb-3"></i><h3 class="text-xl font-bold">المنهج الوقائي</h3><p class="text-gray-300 text-sm">يهدف إلى منع حدوث المشكلات من خلال اكتشافها في مراحلها الأولى وإزالة الأسباب المؤدية إليها.</p></div>
+                <div class="info-card p-6 rounded-2xl text-center"><i class="fas fa-heartbeat text-gold-400 text-4xl mb-3"></i><h3 class="text-xl font-bold">المنهج العلاجي</h3><p class="text-gray-300 text-sm">يهدف إلى مساعدة الطالب في حل مشكلاتهم والعودة إلى حالة التوافق والصحة النفسية باستخدام الأساليب العلمية المتخصصة.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-navy-700 pt-16 pb-8 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <div>
-                    <a href="#home" class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <svg viewBox="0 0 40 40" class="w-8 h-8"><polygon points="20,2 25,15 38,15 27,23 31,37 20,29 9,37 13,23 2,15 15,15" fill="url(#goldGrad2)"/><defs><linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD040"/><stop offset="100%" style="stop-color:#B8860B"/></linearGradient></defs></svg>
-                        <span class="text-lg font-bold gradient-text">التوجيه الطلابي</span>
-                    </a>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">مدرسة الجشة المتوسطة — وحدة التوجيه الطلابي لتعزيز الانضباط المدرسي وبيئة تعليمية داعمة</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">روابط سريعة</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-gold-400 transition-colors text-sm">الرئيسية</a></li>
-                        <li><a href="#programs" class="text-gray-400 hover:text-gold-400 transition-colors text-sm">البرامج</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-gold-400 transition-colors text-sm">عن الموجه</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-gold-400 transition-colors text-sm">تواصل</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">أبرز البرامج</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#programs" class="text-gray-400 hover:text-gold-400 transition-colors text-sm">البرنامج التوجيهي</a></li>
-                        <li><a href="#programs" class="text-gray-400 hover:text-gold-400 transition-colors text-sm">تعزيز السلوك الإيجابي</a></li>
-                        <li><a href="#programs" class="text-gray-400 hover:text-gold-400 transition-colors text-sm">الحد من العنف (رفق)</a></li>
-                        <li><a href="#programs" class="text-gray-400 hover:text-gold-400 transition-colors text-sm">التوجيه التعليمي والمهني</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">معلومات التواصل</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-center space-x-3 space-x-reverse text-gray-400 text-sm"><i class="fas fa-school text-gold-400 w-5"></i><span>مدرسة الجشة المتوسطة</span></li>
-                        <li class="flex items-center space-x-3 space-x-reverse text-gray-400 text-sm"><i class="fas fa-user-tie text-gold-400 w-5"></i><span>عبدالهادي بن محمد المحسن</span></li>
-                        <li class="flex items-center space-x-3 space-x-reverse text-gray-400 text-sm"><i class="fas fa-calendar text-gold-400 w-5"></i><span>الفصل الثاني 1447هـ</span></li>
-                    </ul>
-                </div>
+    <!-- المهام اليومية للموجه -->
+    <section class="py-16 px-5 bg-navy-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold">المهام اليومية <span class="text-gold-400">للموجه الطلابي</span></h2></div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="bg-navy-700/70 p-5 rounded-xl text-center border-b-4 border-gold-500"><i class="fas fa-clipboard-list text-gold-400 text-3xl mb-3"></i><h3 class="font-bold text-lg">الإشراف والمتابعة</h3><p class="text-sm text-gray-300">متابعة الطلاب أثناء الطابور الصباحي والفسح ورصد الحالات الطارئة.</p></div>
+                <div class="bg-navy-700/70 p-5 rounded-xl text-center border-b-4 border-gold-500"><i class="fas fa-hand-holding-heart text-gold-400 text-3xl mb-3"></i><h3 class="font-bold text-lg">تقديم الرعاية والإرشاد</h3><p class="text-sm text-gray-300">عقد جلسات التوجيه الفردية والجماعية وتقديم الدعم النفسي والاجتماعي.</p></div>
+                <div class="bg-navy-700/70 p-5 rounded-xl text-center border-b-4 border-gold-500"><i class="fas fa-chart-line text-gold-400 text-3xl mb-3"></i><h3 class="font-bold text-lg">رصد ومتابعة الحالات</h3><p class="text-sm text-gray-300">متابعة الطلاب المتأخرين دراسياً ومتكرري الغياب وإحالتهم للجهات المختصة.</p></div>
+                <div class="bg-navy-700/70 p-5 rounded-xl text-center border-b-4 border-gold-500"><i class="fas fa-file-alt text-gold-400 text-3xl mb-3"></i><h3 class="font-bold text-lg">التوثيق والتقارير</h3><p class="text-sm text-gray-300">توثيق الخدمات والبرامج في نظام نور وإعداد التقارير الدورية للمتابعة.</p></div>
             </div>
-            <div class="section-divider mb-8"></div>
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-gray-500 text-sm">© 1447هـ وحدة التوجيه الطلابي — مدرسة الجشة المتوسطة</p>
-                <div class="flex space-x-6 space-x-reverse">
-                    <span class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-chart-simple"></i> مؤشرات تفاعلية</span>
-                    <span class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-book"></i> اللائحة المحدثة</span>
-                    <span class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-trophy"></i> إنجازات قابلة للقياس</span>
+            <div class="mt-6 text-center p-4 bg-gold-500/10 rounded-xl"><i class="fas fa-phone-alt text-gold-400 ml-2"></i> التواصل مع الأسرة: استقبال أولياء الأمور وتقديم التوجيهات اللازمة ومشاركتهم في حل المشكلات.</div>
+        </div>
+    </section>
+
+    <!-- برامج التوجيه الطلابي -->
+    <section id="programs" class="py-16 px-5 bg-navy-700">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">البرامج والخدمات <span class="text-gold-400">الرئيسية</span></h2>
+                <p class="text-gray-400 mt-2">مستندة إلى خطة التوجيه الطلابي 1447هـ – الإدارة العامة للتوجيه الطلابي</p>
+            </div>
+            <div id="programsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div id="programDetailContainer" class="mt-12 program-detail"></div>
+        </div>
+    </section>
+
+    <!-- نموذج التواصل عبر واتساب -->
+    <section id="contact" class="py-16 px-5 bg-navy-800 border-t border-gold-500/20">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold">تواصل مع <span class="text-whatsapp-500">الموجه الطلابي</span></h2>
+            <p class="text-gray-300 mt-2 mb-8">للاستفسار عن أي برنامج أو خدمة، أرسل رسالة مباشرة عبر واتساب</p>
+            <div class="glass p-6 rounded-2xl max-w-xl mx-auto bg-navy-600/50 backdrop-blur-sm border border-white/10">
+                <div class="flex items-center justify-center gap-4 mb-5">
+                    <i class="fab fa-whatsapp text-whatsapp-500 text-4xl"></i>
+                    <div class="text-right">
+                        <p class="font-bold text-lg">عبدالهادي بن محمد المحسن</p>
+                        <p class="text-sm text-gold-400">الموجه الطلابي – مدرسة الجشة المتوسطة</p>
+                    </div>
                 </div>
+                <form id="waForm" class="space-y-4">
+                    <input type="text" id="waName" placeholder="الاسم" class="w-full p-3 rounded-xl bg-navy-700 border border-gray-600 focus:border-gold-400 outline-none">
+                    <select id="waProgram" class="w-full p-3 rounded-xl bg-navy-700 border border-gray-600">
+                        <option value="">اختر البرنامج المراد الاستفسار عنه</option>
+                        <option>البرنامج التوجيهي</option><option>تعزيز السلوك الإيجابي</option><option>خفض العنف (رفق)</option><option>التوجيه المهني</option><option>رعاية الفئات الخاصة</option><option>رعاية متكرري الغياب</option><option>إطار علاقة الأسرة</option><option>المجلس الطلابي</option><option>الاحتفاء بالخريجين</option><option>الاستخدام الآمن للإنترنت</option><option>تنمية الدافعية</option><option>التوجيه وقت الأزمات</option>
+                    </select>
+                    <textarea id="waMessage" rows="3" placeholder="اكتب استفسارك هنا..." class="w-full p-3 rounded-xl bg-navy-700 border border-gray-600"></textarea>
+                    <button type="submit" class="wa-btn w-full py-3 rounded-xl font-bold"><i class="fab fa-whatsapp ml-2"></i> إرسال عبر واتساب</button>
+                </form>
             </div>
         </div>
+    </section>
+
+    <footer class="py-6 text-center text-gray-500 text-sm border-t border-white/10 bg-navy-900">
+        © 1447هـ | خطة برامج وخدمات التوجيه الطلابي – مدرسة الجشة المتوسطة | المصدر: الإدارة العامة للتوجيه الطلابي
     </footer>
 
-    <!-- Back to Top -->
-    <button id="backToTop" class="fixed bottom-8 left-8 w-12 h-12 rounded-full bg-gold-500 text-navy-600 flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-gold-400 hover:-translate-y-1 z-40"><i class="fas fa-arrow-up"></i></button>
-
     <script>
-        // Navigation
-        const navbar = document.getElementById('navbar');
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const closeMobileMenu = document.getElementById('closeMobileMenu');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-        let lastScrollY = 0;
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-            if (currentScrollY > 50) { navbar.classList.add('bg-navy-600/95', 'backdrop-blur-xl', 'shadow-lg'); } else { navbar.classList.remove('bg-navy-600/95', 'backdrop-blur-xl', 'shadow-lg'); }
-            if (currentScrollY > lastScrollY && currentScrollY > 200) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform = 'translateY(0)'; }
-            lastScrollY = currentScrollY;
-        });
-        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; });
-        closeMobileMenu.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; });
-        mobileNavLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }); });
+        // رقم واتساب الموجه الطلابي
+        const WA_NUMBER = "966504588900";
+        function openWhatsApp(msg) { window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank'); }
 
-        // Scroll Reveal
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        revealElements.forEach(el => revealObserver.observe(el));
-
-        // Counters
-        const counters = document.querySelectorAll('.counter[data-target]');
-        let countersStarted = false;
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !countersStarted) {
-                    countersStarted = true;
-                    counters.forEach(counter => {
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000;
-                        const step = target / (duration / 16);
-                        let current = 0;
-                        const arabicNums = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
-                        function toArabic(n) { return String(n).split('').map(d => arabicNums[parseInt(d)] || d).join(''); }
-                        const updateCounter = () => { current += step; if (current < target) { counter.textContent = '+' + toArabic(Math.floor(current)); requestAnimationFrame(updateCounter); } else { counter.textContent = '+' + toArabic(target); } };
-                        updateCounter();
-                    });
-                }
-            });
-        }, { threshold: 0.5 });
-        const statsSection = document.getElementById('statsSection');
-        if (statsSection) counterObserver.observe(statsSection);
-
-        // Contact Form
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
-        contactForm.addEventListener('submit', (e) => { e.preventDefault(); contactForm.style.display = 'none'; successMessage.classList.remove('hidden'); setTimeout(() => { contactForm.style.display = 'block'; contactForm.reset(); successMessage.classList.add('hidden'); }, 5000); });
-
-        // Back to Top
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => { if (window.scrollY > 500) { backToTop.classList.remove('opacity-0', 'invisible'); backToTop.classList.add('opacity-100', 'visible'); } else { backToTop.classList.add('opacity-0', 'invisible'); backToTop.classList.remove('opacity-100', 'visible'); } });
-        backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-
-        // Particles
-        const particlesContainer = document.getElementById('particles');
-        function createParticles() { for (let i = 0; i < 25; i++) { const particle = document.createElement('div'); particle.classList.add('particle'); particle.style.right = Math.random() * 100 + '%'; particle.style.animationDuration = (Math.random() * 10 + 10) + 's'; particle.style.animationDelay = (Math.random() * 10) + 's'; particle.style.width = (Math.random() * 4 + 2) + 'px'; particle.style.height = particle.style.width; particle.style.opacity = Math.random() * 0.5 + 0.1; particlesContainer.appendChild(particle); } }
-        createParticles();
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' }); } }); });
-
-        // ==================== PROGRAM DATA ====================
+        // بيانات البرامج (مستخرجة من ملف PDF)
         const programsData = [
-            {
-                id: 1, title: "البرنامج التوجيهي", icon: "fas fa-compass", color: "text-gold-600", bgColor: "bg-gold-100", borderColor: "#D4A017", tag: "بداية العام الدراسي", tagColor: "bg-gold-100 text-gold-700",
-                nature: "وقائي / وقائي", timing: "الأسبوع التمهيدي والأول",
-                description: "تهيئة الطلاب المستجدين في الصف الأول (ابتدائي، متوسط، ثانوي) والطلاب المنتقلين للبيئة المدرسية، والتعريف بالمرافق والأنظمة.",
-                goals: "يُعنى هذا البرنامج بالتهيئة النفسية والتربوية والاجتماعية للطلاب في البيئة المدرسية، لتحقيق التكيف مع البيئة المدرسية الجديدة.",
-                target: "الطلاب المستجدين في الصف الأول (ابتدائي، متوسط، ثانوي) والطلاب المنتقلين للبيئة المدرسية الجديدة.",
-                indicators: "نسبة الطلاب المتكيفين (ابتدائي أول - متوسط أول - ثانوي أول).",
-                docs: "دليل البرنامج.",
-                steps: [
-                    "إعداد وتفعيل الخطة للفئات المستهدفة وفقاً لما ورد في دليل البرنامج.",
-                    "إعداد محتوى إعلامي للتعريف بالبرنامج.",
-                    "استثمار التواصل مع الأسرة لتشجيع أبنائهم على الالتزام والطموح.",
-                    "استثمار منصات التعلم المتاحة (منصة مدرستي - قناة عين) لتعزيز تعلم الطلاب.",
-                    "تقديم التوجيهات المناسبة للأسر لتهيئة البيئة المحفزة لتعلم أبنائهم.",
-                    "إشراك المعلمين للتعريف بمتطلبات المناهج الدراسية بأسلوب مبسط وواضح.",
-                    "استثمار الأفلام القصيرة التي تعزز مكانة المدرسة وأهمية الالتزام والطموح.",
-                    "متابعة الطلاب الذين تعرضوا لحالة سوء التكيف.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد الطلاب المتكيفين | عدد الطلاب غير المتكيفين"
-            },
-            {
-                id: 2, title: "تعزيز السلوك الإيجابي", icon: "fas fa-thumbs-up", color: "text-green-600", bgColor: "bg-green-100", borderColor: "#10B981", tag: "مستمر", tagColor: "bg-green-100 text-green-700",
-                nature: "نمائي", timing: "مستمر طوال العام",
-                description: "غرس القيم الإيجابية وتعزيزها لدى الطلاب، وتكريم المتميزين سلوكياً لتحفيز أقرانهم.",
-                goals: "زرع المبادئ والقيم الإيجابية وتعزيزها لدى الطلاب، وتكريم المتميزين سلوكياً لتحفيز أقرانهم.",
-                target: "طلاب وطالبات التعليم العام",
-                indicators: "نسبة الطلاب المتميزين سلوكياً على مستوى المدرسة.",
-                docs: "دليل البرنامج.",
-                steps: [
-                    "إعداد خطة البرنامج وفقاً للمواد الواردة في دليل البرنامج.",
-                    "تشكيل فريق العمل وتحديد الفئات المستهدفة والمحتوى الإعلامي.",
-                    "التعريف بالبرنامج من خلال حملات حوارية للطلاب وطاقم العمل والمجتمع المحلي.",
-                    "الإعلان عن مبادئ السلوك الإيجابي عبر القنوات المتاحة.",
-                    "تنفيذ لقاءات وورش عمل للطلاب لتعزيز السلوك الإيجابي.",
-                    "تفعيل دور الشراكات المجتمعية في تنفيذ البرنامج.",
-                    "رصد الطلاب المتميزين سلوكياً وتكريمهم.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد البرامج المنفذة | عدد الطلاب المتميزين"
-            },
-            {
-                id: 3, title: "الحد من العنف (رفق)", icon: "fas fa-hand-paper", color: "text-red-600", bgColor: "bg-red-100", borderColor: "#EF4444", tag: "أساسي", tagColor: "bg-red-100 text-red-700",
-                nature: "وقائي / علاجي", timing: "مستمر",
-                description: "برنامج للحد من التنمر والعنف في المدرسة من خلال التوعية وبناء المهارات الاجتماعية والحوار.",
-                goals: "اكتساب الطلاب المهارات الشخصية والاجتماعية للحد من أشكال العنف المدرسي. وتوعية طاقم العمل وأولياء الأمور بالأساليب الوقائية التربوية المتاحة للحد من العنف والتعامل معه.",
-                target: "طلاب وطالبات التعليم العام",
-                indicators: "نسبة حالات العنف بين الطلاب.",
-                docs: "دليل البرنامج - الحقائب التدريبية.",
-                steps: [
-                    "إعداد خطة تنفيذية تضمن اكتساب الطلاب المهارات الشخصية والاجتماعية للحد من العنف.",
-                    "توعية طاقم العمل وأولياء الأمور بالأساليب الوقائية المناسبة للحد من العنف.",
-                    "تنفيذ دورات تدريبية أو لقاءات لأولياء الأمور والطلاب حول التعامل مع العنف.",
-                    "تفعيل الإشراف اليومي قبل الطابور الصباحي وأثناء الحصص والفسح.",
-                    "رصد وتصنيف حالات العنف.",
-                    "تقديم الأساليب العلاجية للحالات التي تصدر منها العنف والمتعرضة للعنف.",
-                    "متابعة الطلاب الذين تعرضوا للعنف أو الذين يصدرونه.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد البرامج المنفذة | عدد الطلاب الصادر منهم العنف | عدد الطلاب المتعرضين للعنف"
-            },
-            {
-                id: 4, title: "التوجيه التعليمي والمهني", icon: "fas fa-graduation-cap", color: "text-purple-600", bgColor: "bg-purple-100", borderColor: "#8B5CF6", tag: "توجيهي", tagColor: "bg-purple-100 text-purple-700",
-                nature: "نمائي", timing: "طوال العام",
-                description: "مساعدة الطلاب على فهم قدراتهم وميولهم واختيار المسار التعليمي والمهني المناسب لمستقبلهم.",
-                goals: "مساعدة الطلاب على اكتشاف ذواتهم والتعرف على ميولهم وقدراتهم. وتوعية أولياء الأمور بالمسارات التعليمية والمهنية المناسبة لأبنائهم.",
-                target: "طلاب وطالبات التعليم العام",
-                indicators: "نسبة رضا الطلاب عن اختيار المسار التعليمي. نسبة الطلاب الذين أنجزوا الملف المهني أو الحافظة الإلكترونية.",
-                docs: "دليل البرنامج.",
-                steps: [
-                    "إعداد وتفعيل الخطة وفقاً للمواد الواردة في دليل البرنامج.",
-                    "اكتشاف ميول وقدرات الطلاب وتطويرها وتوجيههم للتخصصات المناسبة.",
-                    "تقديم التوجيه المهني والتعليمي بما يتناسب مع المرحلة الدراسية.",
-                    "التواصل مع أولياء الأمور وتوعيتهم وتقديم التوجيهات اللازمة لمساعدة أبنائهم في بناء التوجه المهني المناسب.",
-                    "تنسيق الزيارات الميدانية والزيارات الافتراضية للمؤسسات التعليمية والمهنية.",
-                    "دعوة بعض ممثلي الجهات الحكومية والأهلية لتوعية الطلاب بما تتطلبه مهن المستقبل واحتياجاتها.",
-                    "توجيه الطلاب لتطبيق المعايير والمقاييس المهنية المتاحة على المنصات.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد المستفيدين من البرنامج | عدد البرامج والفعاليات المنفذة"
-            },
-            {
-                id: 5, title: "رعاية الطلاب المتفوقين", icon: "fas fa-medal", color: "text-yellow-600", bgColor: "bg-yellow-100", borderColor: "#F59E0B", tag: "نمائي", tagColor: "bg-yellow-100 text-yellow-700",
-                nature: "نمائي", timing: "مستمر",
-                description: "رعاية الموهوبين والمتفوقين دراسياً وتقديم البرامج المحفزة لهم لتنمية قدراتهم واستمرار تميزهم.",
-                goals: "تقديم الرعاية النفسية والتربوية لطلاب الفئات الخاصة.",
-                target: "طلاب الفئات الخاصة (طلاب الأيتام، طلاب الضمان الاجتماعي، أبناء السجناء، أبناء ذوي الظروف الخاصة، أبناء شهداء الواجب، المكفوفين وذوي الإعاقة).",
-                indicators: "نسبة الطلاب المستفيدين.",
-                docs: "دليل البرنامج.",
-                steps: [
-                    "إعداد وتفعيل الخطة للفئات المستهدفة وفقاً لما ورد في دليل البرنامج.",
-                    "رصد الطلاب من الفئة المستهدفة وجمع البيانات اللازمة عنهم.",
-                    "تصنيف الطلاب حسب الفئة.",
-                    "تفعيل الشراكات مع الجهات ذات العلاقة لتقديم الخدمات المناسبة لهم حسب الأنظمة المتبعة.",
-                    "تقديم برامج للطلاب لتنمية الاعتماد على النفس وتعزيز المسؤولية.",
-                    "توعية الطلاب بالخدمات المقدمة لهم.",
-                    "إشراك الفئة المستهدفة في أنشطة وفعاليات المدرسة المختلفة.",
-                    "إحالة الحالة لوحدة الرعاية الطلابية إذا استدعت ذلك واتخاذ اللازم.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد البرامج المقدمة لهم | عدد الطلاب المستفيدين"
-            },
-            {
-                id: 6, title: "رعاية التأخر الدراسي والغياب", icon: "fas fa-user-clock", color: "text-blue-600", bgColor: "bg-blue-100", borderColor: "#3B82F6", tag: "علاجي", tagColor: "bg-blue-100 text-blue-700",
-                nature: "علاجي", timing: "بداية كل فصل",
-                description: "رصد حالات الغياب المتكرر والتأخر الدراسي، ودراستها، ووضع الخطط العلاجية والتربوية بالتعاون مع الأسرة.",
-                goals: "رفع مستوى التحصيل الدراسي والحد من ظاهرة الغياب المتكرر.",
-                target: "الطلاب المتأخرون دراسياً | الطلاب المتكرر غيابهم",
-                indicators: "نسبة انخفاض الطلاب المتكرر غيابهم. نسبة انخفاض الطلاب المتأخرين دراسياً.",
-                docs: "دليل التدخلات التربوية.",
-                steps: [
-                    "رصد الطلاب المتأخرين دراسياً والمتكرر غيابهم.",
-                    "دراسة ومعرفة أسباب تأخر الطلاب الدراسي وغيابهم.",
-                    "بناء خطط تدخل تربوي وعلاجي تتناسب مع حالة الطالب.",
-                    "تزويد المعلمين بخطط التدخل والعلاج بما يتناسب مع حالة الطالب.",
-                    "توعية أولياء الأمور ومشاركتهم في البحث عن أسباب المشكلات وحلولها.",
-                    "متابعة مدى التحسن الذي طرأ على الطلاب.",
-                    "تقييم خطط التدخل العلاجي والمتابعة.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد الطلاب المستفيدين من تكرار الغياب | عدد الطلاب المستفيدين من تأخر دراسي"
-            },
-            {
-                id: 7, title: "رعاية ذوي الظروف الخاصة", icon: "fas fa-hand-holding-heart", color: "text-pink-600", bgColor: "bg-pink-100", borderColor: "#D946EF", tag: "سرية", tagColor: "bg-pink-100 text-pink-700",
-                nature: "وقائي / علاجي", timing: "مستمر وسري",
-                description: "رعاية الطلاب الأيتام، وأبناء المسجونين، وأبناء الأسر المتعاطية، وطلاب الحماية الاجتماعية، وتقديم الدعم النفسي والاجتماعي.",
-                goals: "تقديم الرعاية النفسية والتربوية لطلاب الفئات الخاصة.",
-                target: "طلاب الفئات الخاصة (طلاب الأيتام، طلاب الضمان الاجتماعي، أبناء السجناء، أبناء ذوي الظروف الخاصة، أبناء شهداء الواجب، المكفوفين وذوي الإعاقة).",
-                indicators: "نسبة الطلاب المستفيدين.",
-                docs: "دليل البرنامج.",
-                steps: [
-                    "إعداد وتفعيل الخطة للفئات المستهدفة وفقاً لما ورد في دليل البرنامج.",
-                    "رصد الطلاب من الفئة المستهدفة وجمع البيانات اللازمة عنهم.",
-                    "تصنيف الطلاب حسب الفئة.",
-                    "تفعيل الشراكات مع الجهات ذات العلاقة لتقديم الخدمات المناسبة لهم حسب الأنظمة المتبعة.",
-                    "تقديم برامج للطلاب لتنمية الاعتماد على النفس وتعزيز المسؤولية.",
-                    "توعية الطلاب بالخدمات المقدمة لهم.",
-                    "إشراك الفئة المستهدفة في أنشطة وفعاليات المدرسة المختلفة.",
-                    "إحالة الحالة لوحدة الرعاية الطلابية إذا استدعت ذلك واتخاذ اللازم.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد البرامج المقدمة لهم | عدد الطلاب المستفيدين"
-            },
-            {
-                id: 8, title: "التوعية بأضرار التدخين والمخدرات", icon: "fas fa-ban", color: "text-gray-600", bgColor: "bg-gray-100", borderColor: "#6B7280", tag: "وقائي", tagColor: "bg-gray-100 text-gray-700",
-                nature: "وقائي", timing: "فترات محددة",
-                description: "تعزيز وعي الطلاب بأضرار التدخين والمخدرات والمؤثرات العقلية وسبل الوقاية منها وطرق التعامل معها.",
-                goals: "اكتساب الطلاب المهارات اللازمة للتعامل مع الألعاب الإلكترونية. وتوعية طاقم العمل وأولياء الأمور والطلاب بالاستخدام الآمن للإنترنت والألعاب الإلكترونية.",
-                target: "طلاب وطالبات التعليم العام",
-                indicators: "نسبة الطلاب المستفيدين من البرنامج.",
-                docs: "أدلة البرنامج.",
-                steps: [
-                    "تنفيذ حملة توعية للطلاب وطاقم العمل وأولياء الأمور حول الاستخدام الآمن للإنترنت والألعاب الإلكترونية.",
-                    "تفعيل خطة البرنامج حسب ما ورد في الدليل.",
-                    "توعية أولياء الأمور بالأساليب التربوية المناسبة للتعامل مع الألعاب الإلكترونية والإنترنت.",
-                    "تنفيذ برامج حوارية للطلاب ودورات تدريبية لتنمية مهارات التفكير الناقد لدى الطلاب.",
-                    "تفعيل التوجيه الفردي والجمعي ودراسة الحالات مع إساءة استخدام الألعاب الإلكترونية والإنترنت.",
-                    "تفعيل خطط العلاج المقدمة للطلاب المتأثرين بإساءة استخدام الإنترنت والألعاب الإلكترونية.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد البرامج المنفذة | عدد الطلاب المتأثرين بإساءة استخدام الإنترنت والألعاب الإلكترونية"
-            },
-            {
-                id: 9, title: "الأمن السيبراني والوعي الرقمي", icon: "fas fa-shield-alt", color: "text-cyan-600", bgColor: "bg-cyan-100", borderColor: "#06B6D4", tag: "وقائي", tagColor: "bg-cyan-100 text-cyan-700",
-                nature: "وقائي", timing: "مستمر",
-                description: "توعية الطلاب بمخاطر العالم الرقمي وحمايتهم من التنمر الإلكتروني والمحتوى الضار.",
-                goals: "اكتساب الطلاب المهارات اللازمة للتعامل مع الألعاب الإلكترونية. وتوعية طاقم العمل وأولياء الأمور والطلاب بالاستخدام الآمن للإنترنت والألعاب الإلكترونية.",
-                target: "طلاب وطالبات التعليم العام",
-                indicators: "نسبة الطلاب المستفيدين من البرنامج.",
-                docs: "أدلة البرنامج.",
-                steps: [
-                    "تنفيذ حملة توعية للطلاب وطاقم العمل وأولياء الأمور حول الاستخدام الآمن للإنترنت والألعاب الإلكترونية.",
-                    "تفعيل خطة البرنامج حسب ما ورد في الدليل.",
-                    "توعية أولياء الأمور بالأساليب التربوية المناسبة للتعامل مع الألعاب الإلكترونية والإنترنت.",
-                    "تنفيذ برامج حوارية للطلاب ودورات تدريبية لتنمية مهارات التفكير الناقد لدى الطلاب.",
-                    "تفعيل التوجيه الفردي والجمعي ودراسة الحالات مع إساءة استخدام الألعاب الإلكترونية والإنترنت.",
-                    "تفعيل خطط العلاج المقدمة للطلاب المتأثرين بإساءة استخدام الإنترنت والألعاب الإلكترونية.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد البرامج المنفذة | عدد الطلاب المتأثرين بإساءة استخدام الإنترنت والألعاب الإلكترونية"
-            },
-            {
-                id: 10, title: "شراكة المدرسة مع الأسرة (ارتقاء)", icon: "fas fa-users", color: "text-pink-600", bgColor: "bg-pink-100", borderColor: "#EC4899", tag: "تعاوني", tagColor: "bg-pink-100 text-pink-700",
-                nature: "نمائي / تعاوني", timing: "مستمر",
-                description: "تعزيز العلاقة بين المدرسة والأسرة وفتح قنوات اتصال فعالة لتحقيق الشراكة الحقيقية في تربية الطالب.",
-                goals: "توعية الأسرة بطرق التعامل مع الأبناء وفق خصائص النمو والفروق الفردية. وتوعية الأسرة بأهمية التواصل المستمر مع المدرسة لتحقيق الانضباط المدرسي. وتعزيز دور الأسرة في المشاركة لتحقيق أهداف المناهج الإرشادية (النمائي - الوقائي - العلاجي).",
-                target: "أولياء الأمور",
-                indicators: "نسبة مشاركة الأسرة مع المدرسة.",
-                docs: "دليل إطار علاقة المدرسة مع الأسرة.",
-                steps: [
-                    "مشاركة أولياء الأمور في الأنشطة المرتبطة بتعليم الأبناء.",
-                    "تفعيل قنوات التواصل مع أولياء الأمور (منصة مدرستي - نظام نور - رسائل SMS).",
-                    "تفعيل مجالس أولياء الأمور وتوفير المكان المناسب لهم.",
-                    "توعية أولياء الأمور بقواعد السلوك والمواظبة.",
-                    "تزويد أولياء الأمور بالبرامج والخدمات الإرشادية وإتاحة مشاركتهم.",
-                    "اطلاع أولياء الأمور على المستوى التحصيلي لأبنائهم عبر قنوات التواصل المعتمدة.",
-                    "تشجيع أولياء الأمور على المشاركة في توعية وتحفيز أبنائهم في الاختبارات الوطنية والدولية.",
-                    "إعداد تقرير المشاركة."
-                ],
-                achievement: "عدد البرامج والفعاليات المنفذة بمشاركة أولياء الأمور | عدد أولياء الأمور المشاركين"
-            },
-            {
-                id: 11, title: "رعاية الطلاب الموهوبين", icon: "fas fa-lightbulb", color: "text-orange-600", bgColor: "bg-orange-100", borderColor: "#F97316", tag: "نمائي", tagColor: "bg-orange-100 text-orange-700",
-                nature: "نمائي", timing: "مستمر",
-                description: "الكشف عن الطلاب الموهوبين في مختلف المجالات ورعاية مواهبهم وتنميتها.",
-                goals: "تعزيز مشاركة الطلاب في اتخاذ القرارات التعليمية والتربوية في المدرسة. ونشر قيم الحوار والنقاش في نفوس الطلاب. وتنمية مهارات القيادة والمسؤولية لدى الطلاب.",
-                target: "طلاب وطالبات التعليم العام",
-                indicators: "نسبة تفعيل توصيات المجلس.",
-                docs: "دليل المجلس الطلابي.",
-                steps: [
-                    "إعداد الخطة التنفيذية للمجلس تتضمن البرامج والأنشطة والفعاليات المدرسية.",
-                    "تشكيل المجلس الطلابي وإعداد الإطار التنظيمي له.",
-                    "رصد الاحتياجات المختلفة بالمدرسة واقتراح الحلول المناسبة لها.",
-                    "دراسة ما يرد من الطلاب من مقترحات وتطلعات وتوظيفها في تحسين العملية التربوية مثل (جداول الاختبارات - الأنشطة المدرسية - البيئة المدرسية).",
-                    "رفع تقرير بتوصيات المجلس لإدارة المدرسة.",
-                    "دراسة التقارير وإعداد تغذية راجعة للمجلس.",
-                    "قياس أثر المجلس.",
-                    "إعداد تقرير المجلس."
-                ],
-                achievement: "عدد الطلاب المستفيدين من أنشطة المجلس الطلابي | عدد الطلاب المشاركين في أنشطة المجلس الطلابي"
-            },
-            {
-                id: 12, title: "رعاية الطلاب ذوي الإعاقة", icon: "fas fa-wheelchair", color: "text-teal-600", bgColor: "bg-teal-100", borderColor: "#14B8A6", tag: "دمج", tagColor: "bg-teal-100 text-teal-700",
-                nature: "علاجي / دمج", timing: "مستمر",
-                description: "دمج الطلاب ذوي الإعاقة في البيئة المدرسية وتوفير التسهيلات والدعم اللازم.",
-                goals: "الاحتفال بخريجي الصف الثالث ثانوي. وتعزيز الاتجاه الإيجابي للطلاب نحو المدرسة.",
-                target: "طلاب خريجو الصف الثالث ثانوي",
-                indicators: "نسبة المدارس المنفذة.",
-                docs: "إطار الاحتفاء.",
-                steps: [
-                    "إعداد خطة زمنية لتنفيذ الفعالية.",
-                    "اختيار المكان المناسب للاحتفال بالخريجين.",
-                    "توجيه الدعوات لأولياء أمور الطلاب الخريجين.",
-                    "توعية أولياء الأمور بأهمية دورهم ومشاركتهم في تنفيذ الاحتفاء.",
-                    "مشاركة الطلاب في برامج وأنشطة الاحتفاء وفق رغبتهم.",
-                    "إعداد تقرير الفعالية."
-                ],
-                achievement: "عدد البرامج والفعاليات المنفذة | عدد الطلاب المستفيدين"
-            },
-            {
-                id: 13, title: "قواعد السلوك والمواظبة", icon: "fas fa-scale-balanced", color: "text-indigo-600", bgColor: "bg-indigo-100", borderColor: "#6366F1", tag: "نظامي", tagColor: "bg-indigo-100 text-indigo-700",
-                nature: "نظامي", timing: "مستمر طوال العام",
-                description: "تعزيز الالتزام بالنظام المدرسي وتطبيق لائحة قواعد السلوك والمواظبة لعام 1447هـ.",
-                goals: "تعزيز الالتزام بالنظام المدرسي وتطبيق لائحة قواعد السلوك والمواظبة لضمان بيئة تربوية آمنة ومنتجة.",
-                target: "طلاب وطالبات التعليم العام وأولياء الأمور",
-                indicators: "نسبة الالتزام بقواعد السلوك والمواظبة والانضباط المدرسي. مدى التزام المعلمين بقواعد السلوك والمواظبة والانضباط المدرسي. نشر المدرسة لقواعد السلوك والمواظبة ومتابعتها وتطبيقها.",
-                docs: "دليل البرنامج.",
-                steps: [
-                    "رصد الطلاب المتأخرين دراسياً والمتكرر غيابهم.",
-                    "دراسة ومعرفة أسباب تأخر الطلاب الدراسي وغيابهم.",
-                    "بناء خطط تدخل تربوي وعلاجي تتناسب مع حالة الطالب.",
-                    "تزويد المعلمين بخطط التدخل والعلاج بما يتناسب مع حالة الطالب.",
-                    "توعية أولياء الأمور ومشاركتهم في البحث عن أسباب المشكلات وحلولها.",
-                    "متابعة مدى التحسن الذي طرأ على الطلاب.",
-                    "تقييم خطط التدخل العلاجي والمتابعة.",
-                    "إعداد تقرير البرنامج."
-                ],
-                achievement: "عدد الطلاب المستفيدين من تكرار الغياب | عدد الطلاب المستفيدين من تأخر دراسي"
-            }
+            { id:1, title:"البرنامج التوجيهي", icon:"fas fa-compass", color:"#D4A017", bgSoft:"#FFF8E7", tag:"وقائي | الأسبوع التمهيدي", desc:"التهيئة النفسية والتربوية والاجتماعية لتحقيق تكيف الطلبة في البيئة المدرسية.", goals:"تشكيل اتجاه إيجابي لدى الطلبة وأولياء الأمور حيال المدرسة. رفع الوعي بأهمية الاختبارات الوطنية والدولية.", target:"الطلبة المستجدين بالصف الأول الابتدائي، طلبة الصفوف الانتقالية (الرابع الابتدائي، الأول متوسط، الأول ثانوي).", indicators:"نسبة الطلبة المتكيفين.", docs:"دليل البرنامج.", steps:["إعداد وتنفيذ الخطة","إعداد محتوى إعلامي","استثمار التقنية مع الأسر","استثمار منصات التعلم","تقديم توجيهات للأسر","مشاركة المعلمين","استثمار الأفلام القصيرة","متابعة حالات سوء التكيف","إعداد التقرير"], achievement:"عدد الطلبة المتكيفين / غير المتكيفين" },
+            { id:2, title:"تعزيز السلوك الإيجابي", icon:"fas fa-thumbs-up", color:"#10B981", bgSoft:"#E6F9EF", tag:"نمائي | مستمر", desc:"دعم السلوك الإيجابي للطلبة وتنميته من خلال بيئة محفزة.", goals:"غرس القيم الإيجابية، تنمية مهارات منسوبي المدرسة.", target:"طلاب وطالبات التعليم العام.", indicators:"نسبة الطلبة المتميزين سلوكياً.", docs:"دليل البرنامج.", steps:["إعداد خطة البرنامج","تشكيل فريق العمل","التعريف بالبرنامج","الإعلان عن القيم","ورش عمل","تفعيل الشراكات","حصر وتكريم المتميزين","إعداد التقرير"], achievement:"عدد البرامج المنفذة / عدد المتميزين" },
+            { id:3, title:"خفض العنف (رفق)", icon:"fas fa-hand-peace", color:"#EF4444", bgSoft:"#FEE2E2", tag:"وقائي/علاجي", desc:"الحد من العنف بين الطلبة بأساليب الوقاية والعلاج.", goals:"إكساب المهارات الشخصية والاجتماعية لخفض العنف، توعية المدرسة والأسرة.", target:"طلاب التعليم العام.", indicators:"نسبة حالات العنف بين الطلبة.", docs:"دليل البرنامج + الحقائب التدريبية.", steps:["إعداد خطة تنفيذية","توعية المنسوبين وأولياء الأمور","دورات تدريبية","تفعيل الإشراف اليومي","رصد وتصنيف العنف","تقديم علاج للحالات","متابعة","إعداد التقرير"], achievement:"عدد البرامج / عدد الصادر منهم العنف / المتعرضين" },
+            { id:4, title:"التوجيه المهني", icon:"fas fa-briefcase", color:"#8B5CF6", bgSoft:"#EDE9FE", tag:"نمائي | طوال العام", desc:"مساعدة الطلبة في اكتشاف ميولهم واستعداداتهم المهنية.", goals:"اكتشاف الذات والميول، توعية أولياء الأمور.", target:"طلاب التعليم العام.", indicators:"نسبة رضا الطلبة عن المسار / إنجاز الملف المهني.", docs:"دليل البرنامج.", steps:["إعداد الخطة","اكتشاف القدرات","تقديم التوجيه","التواصل مع أولياء الأمور","زيارات ميدانية","دعوة جهات مختصة","تطبيق المقاييس","إعداد التقرير"], achievement:"عدد المستفيدين / عدد الفعاليات" },
+            { id:5, title:"رعاية الفئات الخاصة", icon:"fas fa-hand-holding-heart", color:"#EC4899", bgSoft:"#FCE7F3", tag:"دعم نفسي", desc:"تقديم الرعاية النفسية والاجتماعية للطلبة ذوي الظروف الخاصة.", goals:"تقديم الرعاية للفئات الخاصة.", target:"الأيتام، أبناء السجناء، الضمان الاجتماعي، ذوي الإعاقة، الموهوبين، أبناء الشهداء.", indicators:"نسبة المستفيدين.", docs:"دليل البرنامج.", steps:["حصر الطلبة","تصنيف الفئات","تفعيل الشراكات","برامج لتنمية الدافعية","توعية الطلبة","إشراكهم في الأنشطة","إحالة الحالات","إعداد التقرير"], achievement:"عدد البرامج المقدمة / عدد المستفيدين" },
+            { id:6, title:"رعاية متكرري الغياب والمتأخرين", icon:"fas fa-calendar-times", color:"#3B82F6", bgSoft:"#DBEAFE", tag:"علاجي", desc:"التدخلات التربوية للطلبة متكرري الغياب والمتأخرين دراسياً.", goals:"الحد من الغياب ورفع التحصيل.", target:"متكررو الغياب – المتأخرون دراسياً.", indicators:"نسبة انخفاض الغياب / التأخر.", docs:"دليل التدخلات التربوية.", steps:["حصر الطلبة","بحث الأسباب","بناء خطط تدخل","تزويد المعلمين","توعية أولياء الأمور","متابعة التحسن","تقويم الخطط","إعداد التقرير"], achievement:"عدد المستفيدين من الغياب / التأخر" },
+            { id:7, title:"إطار علاقة الأسرة مع المدرسة", icon:"fas fa-users", color:"#F59E0B", bgSoft:"#FEF3C7", tag:"شراكة", desc:"تعزيز مشاركة الأسرة مع المدرسة لتحقيق التكامل.", goals:"تزويد الأسرة بأساليب التعامل، توعية بأهمية التواصل، تعزيز دور الأسرة.", target:"أولياء الأمور.", indicators:"نسبة مشاركة الأسرة.", docs:"دليل الإطار.", steps:["مشاركة أولياء الأمور","تفعيل قنوات التواصل","مجالس أولياء الأمور","توعية بقواعد السلوك","تزويد بالبرامج","اطلاع على المستوى","تحفيز للاختبارات","تقرير الشراكة"], achievement:"عدد البرامج بمشاركة أولياء الأمور / عدد المشاركين" },
+            { id:8, title:"المجلس الطلابي", icon:"fas fa-users-between", color:"#14B8A6", bgSoft:"#CCFBF1", tag:"تمكين", desc:"مجلس يعنى بتعبير الطلبة عن تطلعاتهم.", goals:"تعزيز المشاركة في القرارات، ترسيخ الحوار، تنمية القيادة.", target:"طلاب التعليم العام.", indicators:"نسبة تفعيل توصيات المجلس.", docs:"دليل المجلس الطلابي.", steps:["إعداد الخطة","تشكيل المجلس","رصد الاحتياجات","دراسة المقترحات","رفع التوصيات","تغذية راجعة","قياس الأثر","إعداد التقرير"], achievement:"عدد المستفيدين من الأنشطة / المشاركين" },
+            { id:9, title:"الاستخدام الآمن للإنترنت", icon:"fas fa-shield-alt", color:"#06B6D4", bgSoft:"#CFFAFE", tag:"وقائي", desc:"توعية الطلبة وأولياء الأمور بالاستخدام الآمن للإنترنت.", goals:"إكساب المهارات، توعية المجتمع المدرسي.", target:"طلاب التعليم العام.", indicators:"نسبة المستفيدين.", docs:"أدلة البرنامج.", steps:["حملة توعوية","تنفيذ الخطة","توعية أولياء الأمور","برامج حوارية","توجيه فردي","خطط علاجية","تقرير"], achievement:"عدد البرامج المنفذة / عدد المتأثرين" },
+            { id:10, title:"تنمية الدافعية للتحصيل", icon:"fas fa-chart-line", color:"#F97316", bgSoft:"#FFEDD5", tag:"علاجي", desc:"تنمية دافعية الطلبة للتعلم ورفع التحصيل.", goals:"رفع التحصيل، معالجة ضعف الدافعية، تعزيز دور الأسرة.", target:"طلاب التعليم العام.", indicators:"نسبة المستفيدين من البرنامج والتدخلات.", docs:"حقيبة تنمية الدافعية", steps:["تطبيق مقياس","تحليل النتائج","تقديم تدخلات","تدريب على الحقيبة","تنفيذ خطة المدرسة","توعية الأسرة","إعداد التقارير"], achievement:"عدد المستفيدين / عدد المستفيدين من التدخلات" },
+            { id:11, title:"التوجيه وقت الأزمات", icon:"fas fa-heartbeat", color:"#E11D48", bgSoft:"#FFE4E8", tag:"دعم نفسي", desc:"تقديم التدخلات للطلبة المتعرضين للأزمات.", goals:"إكساب مهارات التعامل مع الأزمات، رفع وعي الأسرة.", target:"طلاب التعليم العام.", indicators:"نسبة المتجاوزين للأزمة.", docs:"دليل البرنامج", steps:["تشكيل فريق","إعداد خطة","حصر وتصنيف","تدريب المعلمين","علاج فردي","استثمار الأنشطة","شراكات","تقارير"], achievement:"عدد المستفيدين / عدد الحالات المتخصصة" }
         ];
 
-        // Show Program Detail
-        function showProgram(index) {
-            const prog = programsData[index];
-            const detailsDiv = document.getElementById('programDetails');
-            
-            detailsDiv.innerHTML = `
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden" style="border-top: 4px solid ${prog.borderColor};">
-                    <!-- Header -->
-                    <div class="p-8 bg-gradient-to-l from-gray-50 to-white">
-                        <div class="flex items-center justify-between flex-wrap gap-4">
-                            <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 rounded-2xl ${prog.bgColor} flex items-center justify-center">
-                                    <i class="${prog.icon} ${prog.color} text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h2 class="text-2xl font-bold text-navy-600">${prog.title}</h2>
-                                    <p class="text-gray-500 text-sm mt-1">بطاقة تعريف البرنامج</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-semibold border border-gray-200">
-                                    <i class="fas fa-tag ml-1 text-gray-400"></i> ${prog.nature}
-                                </span>
-                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-semibold border border-gray-200">
-                                    <i class="fas fa-clock ml-1 text-gray-400"></i> ${prog.timing}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+        function renderPrograms() {
+            const grid = document.getElementById('programsGrid');
+            grid.innerHTML = programsData.map(p => `
+                <div onclick="showProgram(${p.id})" class="bg-navy-800 rounded-2xl p-5 cursor-pointer card-hover border border-gray-700 hover:border-gold-500/50">
+                    <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:${p.bgSoft}; color:${p.color}"><i class="${p.icon} text-2xl"></i></div>
+                    <div><h3 class="text-xl font-bold">${p.title}</h3><p class="text-gold-400 text-sm">${p.tag}</p><p class="text-gray-300 text-sm mt-1">${p.desc.substring(0,80)}...</p></div></div>
+                </div>
+            `).join('');
+        }
 
-                    <div class="p-8 space-y-8">
-                        <!-- Description -->
-                        <div class="bg-gray-50 p-6 rounded-xl border-r-4" style="border-color: ${prog.borderColor};">
-                            <h3 class="text-lg font-bold text-navy-600 mb-3 flex items-center gap-2">
-                                <i class="fas fa-info-circle" style="color: ${prog.borderColor}"></i>
-                                وصف البرنامج
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed">${prog.description}</p>
-                        </div>
-
-                        <!-- Goals -->
-                        <div>
-                            <h3 class="text-lg font-bold text-navy-600 mb-4 flex items-center gap-2">
-                                <i class="fas fa-bullseye text-gold-500"></i>
-                                أهداف البرنامج
-                            </h3>
-                            <div class="bg-gold-50 p-5 rounded-xl border border-gold-200">
-                                <p class="text-gray-700 leading-relaxed">${prog.goals}</p>
-                            </div>
-                        </div>
-
-                        <!-- Target Audience -->
-                        <div>
-                            <h3 class="text-lg font-bold text-navy-600 mb-4 flex items-center gap-2">
-                                <i class="fas fa-users text-blue-500"></i>
-                                الفئة المستهدفة
-                            </h3>
-                            <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-                                <p class="text-gray-700">${prog.target}</p>
-                            </div>
-                        </div>
-
-                        <!-- Achievement Indicators -->
-                        <div>
-                            <h3 class="text-lg font-bold text-navy-600 mb-4 flex items-center gap-2">
-                                <i class="fas fa-chart-line text-green-500"></i>
-                                مؤشرات التحقق (KPIs)
-                            </h3>
-                            <div class="bg-green-50 p-5 rounded-xl border border-green-200">
-                                <p class="text-gray-700">${prog.indicators}</p>
-                            </div>
-                        </div>
-
-                        <!-- Supporting Documents -->
-                        <div>
-                            <h3 class="text-lg font-bold text-navy-600 mb-4 flex items-center gap-2">
-                                <i class="fas fa-file-alt text-purple-500"></i>
-                                الوثائق المساندة
-                            </h3>
-                            <div class="bg-purple-50 p-5 rounded-xl border border-purple-200">
-                                <p class="text-gray-700">${prog.docs}</p>
-                            </div>
-                        </div>
-
-                        <!-- Implementation Steps -->
-                        <div>
-                            <h3 class="text-lg font-bold text-navy-600 mb-4 flex items-center gap-2">
-                                <i class="fas fa-list-check text-orange-500"></i>
-                                إجراءات التنفيذ
-                            </h3>
-                            <div class="space-y-3">
-                                ${prog.steps.map((step, i) => `
-                                    <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white text-sm font-bold" style="background: ${prog.borderColor};">
-                                            ${i + 1}
-                                        </div>
-                                        <span class="text-gray-700 leading-relaxed">${step}</span>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-
-                        <!-- Achievement Table -->
-                        <div>
-                            <h3 class="text-lg font-bold text-navy-600 mb-4 flex items-center gap-2">
-                                <i class="fas fa-trophy text-gold-500"></i>
-                                مؤشر الإنجاز
-                            </h3>
-                            <div class="overflow-x-auto">
-                                <table class="w-full bg-gray-50 rounded-xl overflow-hidden">
-                                    <thead>
-                                        <tr class="bg-gray-100">
-                                            <th class="px-4 py-3 text-right text-sm font-bold text-gray-600 border-b">الرقم</th>
-                                            <th class="px-4 py-3 text-right text-sm font-bold text-gray-600 border-b">مؤشر الإنجاز</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        ${prog.achievement.split('|').map((item, i) => `
-                                            <tr class="border-b border-gray-100 last:border-0">
-                                                <td class="px-4 py-3 text-center text-sm font-bold text-gray-500">${i + 1}</td>
-                                                <td class="px-4 py-3 text-right text-sm text-gray-700">${item.trim()}</td>
-                                            </tr>
-                                        `).join('')}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- Back Button -->
-                        <div class="flex justify-center pt-4">
-                            <button onclick="hideProgram()" class="btn-secondary flex items-center gap-2">
-                                <i class="fas fa-arrow-right"></i>
-                                العودة لقائمة البرامج
-                            </button>
-                        </div>
-                    </div>
+        window.showProgram = function(id) {
+            const p = programsData.find(pr => pr.id === id);
+            if(!p) return;
+            const container = document.getElementById('programDetailContainer');
+            container.innerHTML = `
+                <div class="bg-navy-800/90 rounded-2xl border border-gold-500/40 p-6">
+                    <div class="flex flex-wrap justify-between items-center border-b border-gray-700 pb-3 mb-4"><div class="flex gap-3"><div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:${p.bgSoft}; color:${p.color}"><i class="${p.icon} text-2xl"></i></div><h2 class="text-2xl font-bold">${p.title}</h2></div><span class="px-3 py-1 rounded-full text-sm" style="background:${p.bgSoft}; color:${p.color}">${p.tag}</span></div>
+                    <div class="grid md:grid-cols-2 gap-5"><div><h3 class="text-gold-400 font-bold">الوصف</h3><p>${p.desc}</p><h3 class="text-gold-400 font-bold mt-3">الأهداف</h3><p>${p.goals}</p></div><div><h3 class="text-gold-400 font-bold">الفئة المستهدفة</h3><p>${p.target}</p><h3 class="text-gold-400 font-bold mt-3">مؤشرات التحقق</h3><p>${p.indicators}</p></div></div>
+                    <div class="mt-4"><h3 class="text-gold-400 font-bold">إجراءات التنفيذ</h3><ul class="list-disc pr-5 text-sm">${p.steps.map(s => `<li>${s}</li>`).join('')}</ul></div>
+                    <div class="mt-4 p-3 bg-navy-700/70 rounded-xl"><strong>مؤشر الإنجاز:</strong> ${p.achievement} | <strong>الوثائق:</strong> ${p.docs}</div>
+                    <div class="mt-5 flex gap-3 justify-between"><button onclick="openWhatsApp('الاستفسار عن برنامج: ${p.title}')" class="wa-btn px-5 py-2 rounded-lg"><i class="fab fa-whatsapp"></i> استفسر</button><button onclick="document.getElementById('programDetailContainer').classList.remove('active'); window.scrollTo({top: document.getElementById('programs').offsetTop-80, behavior:'smooth'});" class="text-gold-400 hover:underline">← العودة للبرامج</button></div>
                 </div>
             `;
-            
-            detailsDiv.classList.add('active');
-            detailsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            container.classList.add('active');
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+
+        // نموذج الواتساب
+        document.getElementById('waForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('waName').value || 'ولي أمر';
+            const program = document.getElementById('waProgram').value || 'الخدمات الإرشادية';
+            const msg = document.getElementById('waMessage').value || 'أحتاج إلى استشارة';
+            openWhatsApp(`الاسم: ${name}\nالبرنامج: ${program}\nالرسالة: ${msg}`);
+            document.getElementById('waForm').reset();
+        });
+
+        // القائمة المتنقلة
+        const menuBtn = document.getElementById('menuBtn');
+        let mobileOpen = false;
+        if(menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const navLinks = document.querySelector('nav .hidden.md\\:flex');
+                if(!navLinks) return;
+                if(!mobileOpen) {
+                    navLinks.classList.remove('hidden');
+                    navLinks.classList.add('flex','flex-col','absolute','top-full','right-0','left-0','bg-navy-800','p-4','gap-3','shadow-xl');
+                    mobileOpen = true;
+                } else {
+                    navLinks.classList.add('hidden');
+                    navLinks.classList.remove('flex','flex-col','absolute','top-full','right-0','left-0','bg-navy-800','p-4','gap-3');
+                    mobileOpen = false;
+                }
+            });
         }
 
-        function hideProgram() {
-            const detailsDiv = document.getElementById('programDetails');
-            detailsDiv.classList.remove('active');
-            document.getElementById('programsGrid').scrollIntoView({ behavior: 'smooth' });
-        }
+        renderPrograms();
     </script>
 </body>
 </html>
-
